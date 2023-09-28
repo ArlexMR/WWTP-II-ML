@@ -1,0 +1,148 @@
+{
+    "paths": {
+        "precip"  : "./data/raw/precip_GHCN-daily_2019-2021_inches.csv",
+       
+        "MSD_flow": "./data/raw/MSD_Flow_2019_2021.csv"
+             },
+
+    "USGS_data": {
+
+        "siteNumber" : ["03293000","03293500","03292500","03292555","03293530","03293510"],
+        
+        "site_names" : ["Middle Fork of Beargrass Creek at Old Cannons",
+                        "Middle Fork of Beargrass Creek at Lexington [NOT FOUND]",
+                        "South Fork of Beargrass Creek at Louisville",
+                        "South Fork of Beargrass Creek at E Breckinridge st",
+                        "Muddy Fork of Beargrass Creek at Mockingbird Valley",
+                        "Beargrasss Creek at River Road"
+                        ],
+        "parameterCode" : "00060",
+
+        "startDate"     : "2019-01-01",
+
+        "endDate"       : "2021-12-31"
+                   },
+
+    "model_params": {
+        "n_estimators"  : 500,
+        "max_samples"   : 0.5,
+        "random_state"  : 1,
+        "fraction_test" : 0.2,
+        "ndays_lag"     : 1,
+        "max_features"  : 2
+                    },
+
+    "fig_var_importances":{
+
+        "variable_names": {
+            "03293000": "Gage #3",
+            "03293500": "03293500",          
+            "03292500": "Gage #1",           
+            "03292555": "Gage #2",       
+            "03293530": "Gage #4",        
+            "03293510": "Gage #5", 
+            "Precip"  : "Precip.",
+            "t-3"     : "$Q_{t-3}$",
+            "t-2"     : "$Q_{t-2}$",
+            "t-1"     : "$Q_{t-1}$",
+            "Qwwtp_t-1": "Lag. Influent"
+                          },
+        "titles"        :{
+            "MFWQTC(MGD)" : "B) Morris Forman", 
+            "DRGWQTC(MGD)": "C) Derek R. Guthrie",
+            "CCWQTC(MGD)" : "D) Cedar Creek",
+            "FFWQTP(MGD)" : "E) Floyds Fork",
+            "HCWQTP(MGD)" : "F) Hite Creek"
+                         },
+        "nrows"           : 1,
+        "ncols"           : 5,
+        "label_size"      : 13,
+        "ticklabel_size"  : 12,
+        "colors"          : ["k","#DFA100"],
+        "title_size"      : 14,
+        "hspace"          : 0.1,
+        "wspace"          : 0.1,
+        "legend_lbl_size" : 10
+        
+                           }, 
+    "fig_performance" : {
+
+        "titles"        :{
+            "MFWQTC(MGD)" : "A) Morris Forman", 
+            "DRGWQTC(MGD)": "B) Derek R.Guthrie",
+            "CCWQTC(MGD)" : "C) Cedar Creek",
+            "FFWQTP(MGD)" : "D) Floyds Fork",
+            "HCWQTP(MGD)" : "E) Hite Creek"
+                            },
+        "nrows"           : 1,
+        "ncols"           : 5,
+        "label_size"      : 13,
+        "ticklabel_size"  : 10,
+        "colors"          : ["#999999","#DFA100"],
+        "title_size"      : 13,
+        "hspace"          : 0.1,
+        "wspace"          : 0.1,
+        "legend_lbl_size" : 10
+        
+                            }, 
+
+    "fig_time_series": {
+        "colors"           : ["#999999","#DFA100","#648E78","#B67000"],
+        "ticklabel_size"   : 10,
+        "annot_labl_size"  : 11,
+        "y_labl_size"      : 13,
+        "title_size"       : 14,
+        "legend_lbl_size"  : 10
+    },
+    "fig_shap_ale_RII" : {
+        "variable_names": {
+            "03293000": "Gage #3",
+            "03293500": "03293500",          
+            "03292500": "Gage #1",           
+            "03292555": "Gage #2",       
+            "03293530": "Gage #4",        
+            "03293510": "Gage #5", 
+            "Precip"  : "Precip.",
+            "t-3"     : "$Q_{t-3}$",
+            "t-2"     : "$Q_{t-2}$",
+            "t-1"     : "$Q_{t-1}$"
+                          },
+            "titles"        :{
+            "MFWQTC(MGD)" : "A) Morris Forman", 
+            "DRGWQTC(MGD)": "B) Derek R. G.",
+            "CCWQTC(MGD)" : "C) Cedar Creek",
+            "FFWQTP(MGD)" : "D) Floyds Fork",
+            "HCWQTP(MGD)" : "E) Hite Creek"
+                            },
+            
+             "colors"          : ["#999999","#DFA100"],
+             "color_grid"      : ["#648E78", "#FADD83", "#DFA100", "#B67000"],
+             "tick_lbl_size"   : 8,
+             "lbl_size"        : 10,
+             "title_size"      : 13,
+             "legend_lbl_size" : 8,
+             "y_lbl_pad"       : -4
+                            
+
+    },
+    "Fig_OOB_GOF" : {
+        "titles":{  "MFWQTC(MGD)" : "A) Morris Forman", 
+                    "DRGWQTC(MGD)": "B) Derek R. Guthrie",
+                    "CCWQTC(MGD)" : "C) Cedar Creek",
+                    "FFWQTP(MGD)" : "D) Floyds Fork",
+                    "HCWQTP(MGD)" : "E) Hite Creek"
+                 },
+        "colors"    : ["#648E78", "#FADD83", "#DFA100", "#B67000", "#763500"],
+        "label_size"      : 13,
+        "ticklabel_size"  : 12,
+        "title_size"      : 14,
+        "hspace"          : 0.1,
+        "wspace"          : 0.1,
+        "legend_lbl_size" : 10
+    },
+    "Fig_RII_2" : {
+        "ts_ylbl" : {    "MFWQTC(MGD)" : "Morris Forman", 
+                        "DRGWQTC(MGD)":  "Derek R. Guthrie"
+                    }
+    }
+}
