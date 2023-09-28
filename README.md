@@ -1,4 +1,4 @@
-# Predicting wastewater treatment plant influent in mixed, separate, and combined sewers using nearby surface water discharge for better wastewater-based epidemiology sampling design
+### Predicting wastewater treatment plant influent in mixed, separate, and combined sewers using nearby surface water discharge for better wastewater-based epidemiology sampling design
 
 Arlex Marin-Ramirez<sup>a</sup>, Tyler Mahoney<sup>a</sup>, Ted Smith<sup>b</sup>, and Rochelle H. Holm<sup>b*</sup>
 
